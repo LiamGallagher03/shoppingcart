@@ -1,10 +1,9 @@
 import React from 'react'
-
-function StoreItem() {
+function StoreItem({id, name, price, inventory}) {
     return (
-        <div>
-            
-        </div>
+        <li>
+            {name}   {price} ({inventory} remaining)
+        </li>
     )
 }
 
