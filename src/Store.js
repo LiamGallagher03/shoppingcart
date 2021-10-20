@@ -35,15 +35,22 @@ const Store = () => {
         }
     ])
 
+        const addToCart = (id) => {
+            const item = items.find(item => item.id == id)
+            alert(item.name)
+        }
+
     return (
         <div>
             <section>
                 {items.map((item) =>
                     <StoreItem
-                        id={item.title}
                         name={item.name}
+                        id={item.id}
                         price={item.price}
                         inventory={item.inventory}
+                        key = {item.id}
+                        addToCart = {addToCart}
                     />
                 )}
             </section>
